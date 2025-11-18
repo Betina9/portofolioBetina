@@ -1,8 +1,7 @@
 body {
   text-align: center;
   font-family: Roboto, sans-serif;
-  background-color: black;
-  color: whitesmoke;
+  color: black;
   font-size: 21px;
   font-weight: 300;
 }
@@ -62,4 +61,20 @@ h3 {
 .greeting {
   background-color: whitesmoke;
   color: black;
+}
+
+header,
+.about,
+.projects {
+  padding: 100px 0;
+}
+
+header {
+  background-color: #d7d7d7;
+}
+.about {
+  background-color: #ffeaea;
+}
+.projects {
+  background-color: #eaf9ff;
 }
