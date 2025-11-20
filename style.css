@@ -9,10 +9,27 @@ body {
   line-height: 1.6;
 }
 
-.container {
-  width: 600px;
+img {
   margin: 0 auto;
+  max-width: 600px;
 }
+
+p {
+  margin: 15px 0;
+}
+
+a {
+  color: #cc9c28;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+a:hover,
+a:focus {
+  color: #131313;
+}
+
+/*TYPOGRAFI*/
 
 h1,
 h2 {
@@ -39,20 +56,52 @@ h3 {
   margin-top: 0;
 }
 
-p {
-  margin: 15px 0;
+/*LAYOUT*/
+
+.container {
+  width: 600px;
+  margin: 0 auto;
 }
 
-a {
-  color: #cc9c28;
-  font-weight: 900;
-  cursor: pointer;
+.about,
+.prosjekter {
+  padding: 100px 0;
 }
 
-a:hover,
-a:focus {
-  color: #131313;
+/*AVATAR HOVER COMPONENT*/
+
+.avatar-hover {
+  position: relative;
+  width: 600px;
+  height: 600px;
+  margin: 40px auto;
+  overflow: hidden;
 }
+
+.static-image,
+.hover-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+.hover-video {
+  opacity: 0;
+}
+
+.avatar-hover:hover .static-image {
+  opacity: 0;
+}
+
+.avatar-hover:hover .hover-video {
+  opacity: 1;
+}
+
+/*UTILITY CLASSES*/
 
 .bigh1 {
   font-size: 80px;
@@ -70,18 +119,16 @@ a:focus {
   font-size: 16px;
 }
 
-.container {
-  margin: 0 auto;
+.hilsen {
+  display: block;
 }
+
+/*SEKSJONS-STIL*/
 
 .intro {
-  background-color: black;
-  color: whitesmoke;
-}
-
-img {
-  margin: 0 auto;
-  max-width: 600px;
+  padding-top: 70px;
+  background-color: #252525;
+  color: #fff;
 }
 
 .about-me {
@@ -94,31 +141,15 @@ img {
   color: black;
 }
 
-.intro {
-  padding-top: 70px;
-}
-
-.about,
-.prosjekter {
-  padding: 100px 0;
-}
-
-.intro {
-  background-color: #d7d7d7;
-}
 .about {
   background-color: #ffeaea;
 }
+
 .projects {
   background-color: #eaf9ff;
 }
 
-.intro,
 .prosjekter {
   background-color: #252525;
   color: #fff;
-}
-
-.hilsen {
-  display: block;
 }
