@@ -109,6 +109,11 @@ h3 {
   display: block;
 }
 
+.bigh1:hover {
+  color: #cc9c28;
+  text-decoration: underline;
+}
+
 .bigh2 {
   font-size: 60px;
   font-weight: 900;
@@ -152,4 +157,19 @@ h3 {
 .prosjekter {
   background-color: #252525;
   color: #fff;
+}
+.prosjekt-liste {
+  list-style: none;
+  padding: 0;
+  margin: 40px auto;
+  max-width: 600px;
+}
+
+.prosjekt-liste li {
+  background: #333;
+  padding: 18px 25px;
+  margin: 18px 0;
+  border-radius: 10px;
+  text-align: left;
+  transition: transform 0.2s ease, background 0.3s ease;
 }
