@@ -1,7 +1,7 @@
 body {
   text-align: center;
   font-family: Roboto, sans-serif;
-  color: black;
+  color: #222222;
   font-size: 21px;
   font-weight: 300;
   margin: 0;
@@ -63,7 +63,7 @@ h3 {
 /*LAYOUT*/
 
 .container {
-  width: 600px;
+  width: 700px;
   margin: 0 auto;
 }
 
@@ -113,15 +113,16 @@ h3 {
 
 .intro {
   padding-top: 70px;
-  color: black;
+  margin-bottom: 60px;
 }
 
-.about-me {
+.about {
+  background-color: #f4b5b9;
   color: black;
-}
-
-.greeting {
-  color: #4b3f42;
+  padding: 20px;
+  width: 50%;
+  margin: 0 auto;
+  border-radius: 20px;
 }
 
 .prosjekter {
