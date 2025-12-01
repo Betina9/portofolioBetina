@@ -118,16 +118,65 @@ h3 {
 
 .about {
   background-color: #f4b5b9;
-  color: black;
   padding: 20px;
   width: 50%;
   margin: 0 auto;
   border-radius: 20px;
 }
 
-.prosjekter {
-  color: black;
+.prosjekt-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
 }
+
+.prosjekt-kort {
+  background: #ffffffcc;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(4px);
+}
+
+.prosjekt-kort:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.prosjekt-kort img {
+  width: 60%;
+  height: 60%;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.prosjekt-kort h3 {
+  margin-bottom: 10px;
+}
+
+.prosjekt-kort p {
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+}
+
+.prosjekt-kort a {
+  padding: 8px 18px;
+  background-color: #ee9ba0;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #fff;
+  transition: background 0.2s ease;
+}
+
+.prosjekt-kort a:hover {
+  background: #cb2298;
+}
+
 .prosjekt-liste {
   list-style: none;
   padding: 0;
