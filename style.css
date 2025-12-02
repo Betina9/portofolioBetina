@@ -139,6 +139,7 @@ h3 {
   text-align: center;
   transition: transform 0.2s ease, box-shadow 0.3s ease;
   backdrop-filter: blur(4px);
+  margin-bottom: 25px;
 }
 
 .prosjekt-kort:hover {
@@ -177,18 +178,6 @@ h3 {
   background: #cb2298;
 }
 
-.prosjekt-liste {
-  list-style: none;
-  padding: 0;
-  margin: 40px auto;
-  max-width: 600px;
-}
-
-.prosjekt-liste li {
-  background: #333;
-  padding: 18px 25px;
-  margin: 18px 0;
-  border-radius: 10px;
-  text-align: left;
-  transition: transform 0.2s ease, background 0.3s ease;
+.morsom {
+  margin-top: 50px;
 }
