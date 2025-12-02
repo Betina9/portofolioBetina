@@ -9,7 +9,6 @@ body {
   line-height: 1.6;
   background-image: url(images/bakgrunn_cherry1.png);
   background-size: cover;
-  background-repeat: no-repeat;
   background-position: center;
 }
 
@@ -23,31 +22,30 @@ p {
 }
 
 a {
-  color: #ee9ba0;
+  color: #c2576c;
   font-weight: 900;
   cursor: pointer;
+  text-decoration-color: #8f3c52;
+  text-decoration-thickness: 2px;
 }
 
 a:hover,
 a:focus {
-  color: #cb2298;
+  color: #9f2f4a;
 }
 
 /*TYPOGRAFI*/
 
-h1,
-h2 {
+h1 {
   font-weight: 300;
   margin-top: 0;
   margin-bottom: 0;
-}
-
-h1 {
-  font-size: 3.75 rem;
+  font-size: 3.75rem;
 }
 
 h2 {
-  font-size: 2.625 rem;
+  font-weight: 300;
+  font-size: 2.625rem;
   margin-top: 0;
   border-top: 1px solid #c4c4c4;
   border-bottom: 1px solid #c4c4c4;
@@ -55,22 +53,28 @@ h2 {
 }
 
 h3 {
-  font-size: 2.25 rem;
+  font-size: 2.25rem;
   font-weight: 900;
   margin-top: 0;
+}
+
+.prosjekter h2 {
+  margin-top: 20px;
 }
 
 /*LAYOUT*/
 
 .container {
-  width: 700px;
+  max-width: 1300px;
   margin: 0 auto;
 }
 
-.about,
-.prosjekter {
+.about {
   margin-top: 120px;
   margin-bottom: 50px;
+}
+.prosjekter {
+  margin-bottom: 120px;
 }
 
 /*AVATAR HOVER COMPONENT*/
@@ -126,20 +130,30 @@ h3 {
 
 .prosjekt-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(3, minmax(280px, 1fr));
   gap: 30px;
   margin-top: 40px;
 }
 
+.kontakt {
+  margin-top: 100px;
+  margin-bottom: 80px;
+  font-size: 1.2rem;
+}
+
+/*Prosjekt kort*/
 .prosjekt-kort {
   background: #eec3cf;
   border-radius: 12px;
-  padding: 20px;
+  padding: 30px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   text-align: center;
   transition: transform 0.2s ease, box-shadow 0.3s ease;
   backdrop-filter: blur(4px);
-  margin-bottom: 25px;
+  min-height: 620px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .prosjekt-kort:hover {
@@ -148,36 +162,37 @@ h3 {
 }
 
 .prosjekt-kort img {
-  width: 60%;
-  height: 60%;
+  width: 90%;
+  height: 50%;
   object-fit: cover;
   border-radius: 10px;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
-.prosjekt-kort h3 {
+.prosjekt-kort h4 {
   margin-bottom: 10px;
 }
 
 .prosjekt-kort p {
-  font-size: 0.95rem;
+  font-size: 1rem;
   margin-bottom: 15px;
 }
 
 .prosjekt-kort a {
-  padding: 8px 18px;
-  background-color: #ee9ba0;
+  padding: 8px 16px;
+  background-color: #e57c90;
   border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
-  color: #fff;
+  color: #4b3f42;
   transition: background 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
 }
 
 .prosjekt-kort a:hover {
-  background: #cb2298;
+  background: #d5687e;
 }
 
-.morsom {
-  margin-top: 50px;
+.prosjekter h3 {
+  margin: 50px 0 40px;
 }
