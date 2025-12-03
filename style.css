@@ -59,6 +59,11 @@ h3 {
   margin-top: 0;
 }
 
+.about h2 {
+  border-top: 1px solid whitesmoke;
+  border-bottom: 1px solid whitesmoke;
+}
+
 .prosjekter h2 {
   margin-top: 20px;
 }
@@ -67,6 +72,7 @@ h3 {
 
 .container {
   max-width: 1300px;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -81,10 +87,10 @@ h3 {
 /*AVATAR HOVER COMPONENT*/
 
 .static-image {
-  width: 500px;
+  max-width: 100%;
   height: 500px;
-  object-fit: cover;
   display: block;
+  margin: 0 auto;
 }
 
 /*UTILITY CLASSES*/
@@ -117,8 +123,8 @@ h3 {
 /*SEKSJONS-STIL*/
 
 .intro {
-  padding-top: 70px;
-  margin-bottom: 60px;
+  padding-top: 40px;
+  margin-bottom: 35px;
 }
 
 .about {
@@ -141,6 +147,25 @@ h3 {
   margin-bottom: 80px;
   font-size: 1.2rem;
 }
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 30px;
+}
+
+footer i {
+  font-size: 32px;
+  color: #c2576c;
+  margin: 0 12px;
+  transition: color 0.2s ease, transform 0.15s ease;
+}
+
+footer i:hover {
+  color: #9f2f4a;
+  transform: translateY(-2px);
+}
 
 /*Prosjekt kort*/
 .prosjekt-kort {
@@ -151,10 +176,10 @@ h3 {
   text-align: center;
   transition: transform 0.2s ease, box-shadow 0.3s ease;
   backdrop-filter: blur(4px);
-  min-height: 620px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  gap: 15px;
+  min-height: auto;
 }
 
 .prosjekt-kort:hover {
@@ -164,19 +189,20 @@ h3 {
 
 .prosjekt-kort img {
   width: 90%;
+  max-width: 100%;
   height: 50%;
+  height: auto;
   object-fit: cover;
   border-radius: 10px;
-  margin-bottom: 10px;
 }
 
 .prosjekt-kort h4 {
-  margin-bottom: 10px;
+  margin-bottom: 0px;
 }
 
 .prosjekt-kort p {
   font-size: 1rem;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .prosjekt-kort a {
@@ -191,21 +217,72 @@ h3 {
 }
 
 .prosjekt-kort a:hover {
-  background: #d5687e;
+  background: #9d374c;
 }
 
 .prosjekter h3 {
   margin: 50px 0 40px;
 }
 
-footer i {
-  font-size: 32px;
-  color: #c2576c;
-  margin: 0 12px;
-  transition: color 0.2s ease, transform 0.15s ease;
-}
+/* 📱 Mobil (1 kolonne) */
+@media (max-width: 600px) {
+  .prosjekt-grid {
+    grid-template-columns: 1fr;
+  }
 
-footer i:hover {
-  color: #9f2f4a;
-  transform: translateY(-2px);
+  .about {
+    width: 90%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding: 20px;
+  }
+
+  .prosjekter {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding: 20px;
+  }
+  .prosjekt-kort {
+    min-height: auto;
+    justify-content: flex-start;
+    padding: 20px;
+  }
+
+  .prosjekt-kort img {
+    height: auto;
+    max-height: 200px;
+  }
+
+  .bigh1 {
+    font-size: 48px;
+  }
+
+  .bigh2 {
+    font-size: 32px;
+  }
+}
+/*Nettbrett*/
+@media (min-width: 601px) and (max-width: 1000px) {
+  .prosjekt-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .prosjekt-kort {
+    min-height: auto;
+    justify-content: flex-start;
+    padding: 30px;
+  }
+
+  .about {
+    width: 75%;
+  }
+}
+/*PC*/
+@media (min-width: 1001px) {
+  .prosjekt-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .prosjekt-kort {
+    min-height: 620px;
+    justify-content: space-between;
+  }
 }
