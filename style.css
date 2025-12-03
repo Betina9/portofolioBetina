@@ -202,10 +202,12 @@ footer i:hover {
 
 .prosjekt-kort p {
   font-size: 1rem;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
+  min-height: 40px;
 }
 
 .prosjekt-kort a {
+  margin-top: auto;
   padding: 8px 16px;
   background-color: #e57c90;
   border-radius: 8px;
@@ -221,7 +223,7 @@ footer i:hover {
 }
 
 .prosjekter h3 {
-  margin: 50px 0 40px;
+  margin: 10px 0 10px;
 }
 
 /* 📱 Mobil (1 kolonne) */
@@ -281,8 +283,14 @@ footer i:hover {
   .prosjekt-grid {
     grid-template-columns: repeat(3, 1fr);
   }
+
   .prosjekt-kort {
-    min-height: 620px;
-    justify-content: space-between;
+    justify-content: flex-start;
+    gap: 18px;
+  }
+  .prosjekt-kort img {
+    max-height: 160px;
+    object-fit: cover;
+    width: 100%;
   }
 }
