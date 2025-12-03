@@ -10,6 +10,7 @@ body {
   background-image: url(images/bakgrunn_cherry1.png);
   background-size: cover;
   background-position: center;
+  scroll-behavior: smooth;
 }
 
 img {
@@ -195,4 +196,16 @@ h3 {
 
 .prosjekter h3 {
   margin: 50px 0 40px;
+}
+
+footer i {
+  font-size: 32px;
+  color: #c2576c;
+  margin: 0 12px;
+  transition: color 0.2s ease, transform 0.15s ease;
+}
+
+footer i:hover {
+  color: #9f2f4a;
+  transform: translateY(-2px);
 }
